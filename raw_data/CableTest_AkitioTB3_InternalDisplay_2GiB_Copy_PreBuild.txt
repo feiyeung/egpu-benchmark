@@ -1,0 +1,1003 @@
+Platform 0 : Intel(R) Corporation
+Platform 1 : NVIDIA Corporation
+Platform 2 : Advanced Micro Devices, Inc.
+Platform found : Advanced Micro Devices, Inc.
+
+Selected Platform Vendor : Advanced Micro Devices, Inc.
+Device 0 : Ellesmere Device ID is 0000027E3F1F5F40
+Build Options are : -cl-std=CL2.0 
+Build:               _WINxx release
+GPU work items:      32768
+Buffer size:         2147483648
+CPU workers:         1
+Timing loops:        20
+Repeats:             1
+Kernel loops:        20
+inputBuffer:         CL_MEM_READ_ONLY 
+outputBuffer:        CL_MEM_WRITE_ONLY 
+copyBuffer:          CL_MEM_READ_WRITE CL_MEM_ALLOC_HOST_PTR 
+inputSVMBuffer:      CL_MEM_READ_ONLY 
+outputSVMBuffer:     CL_MEM_WRITE_ONLY 
+
+Host baseline (naive):
+
+Timer resolution     403.44  ns
+Page fault           721.70  ns
+Barrier speed        62.12   ns
+
+CPU read             11.66 GB/s
+memcpy()             8.45 GB/s
+memset(,1,)          25.85 GB/s
+memset(,0,)          26.03 GB/s
+
+
+LOOP ITERATIONS
+---------------
+
+Loop 0
+
+
+
+1. Host mapped write to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- WRITE (GBPS)     | 5.488
+ ---------------------------------------|---------------
+ memset() (GBPS)                        | 25.275
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 33554.445
+
+
+2. CL copy of copyBuffer to inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.104
+
+
+3. GPU kernel read of inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 0.222
+
+ Verification Passed!
+
+
+4. GPU kernel write to outputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 3.160
+
+
+5. CL copy of outputBuffer to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.619
+
+
+6. Host mapped read of copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- READ (GBPS)      | 98833.093
+ ---------------------------------------|---------------
+ CPU read (GBPS)                        | 12.509
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 37231.645
+
+ Verification Passed!
+
+
+Loop 1
+
+
+
+1. Host mapped write to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- WRITE (GBPS)     | 201326.672
+ ---------------------------------------|---------------
+ memset() (GBPS)                        | 29.305
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 34187.548
+
+
+2. CL copy of copyBuffer to inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.618
+
+
+3. GPU kernel read of inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 0.264
+
+ Verification Passed!
+
+
+4. GPU kernel write to outputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 3.014
+
+
+5. CL copy of outputBuffer to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.507
+
+
+6. Host mapped read of copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- READ (GBPS)      | 146914.058
+ ---------------------------------------|---------------
+ CPU read (GBPS)                        | 11.376
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 43837.259
+
+ Verification Passed!
+
+
+Loop 2
+
+
+
+1. Host mapped write to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- WRITE (GBPS)     | 452985.011
+ ---------------------------------------|---------------
+ memset() (GBPS)                        | 26.733
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 28459.791
+
+
+2. CL copy of copyBuffer to inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.460
+
+
+3. GPU kernel read of inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 0.221
+
+ Verification Passed!
+
+
+4. GPU kernel write to outputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 3.027
+
+
+5. CL copy of outputBuffer to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.501
+
+
+6. Host mapped read of copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- READ (GBPS)      | 87674.518
+ ---------------------------------------|---------------
+ CPU read (GBPS)                        | 11.590
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 49869.909
+
+ Verification Passed!
+
+
+Loop 3
+
+
+
+1. Host mapped write to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- WRITE (GBPS)     | 301990.007
+ ---------------------------------------|---------------
+ memset() (GBPS)                        | 24.262
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 23430.259
+
+
+2. CL copy of copyBuffer to inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.461
+
+
+3. GPU kernel read of inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 0.221
+
+ Verification Passed!
+
+
+4. GPU kernel write to outputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 3.010
+
+
+5. CL copy of outputBuffer to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.612
+
+
+6. Host mapped read of copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- READ (GBPS)      | 29382.812
+ ---------------------------------------|---------------
+ CPU read (GBPS)                        | 12.378
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 48104.603
+
+ Verification Passed!
+
+
+Loop 4
+
+
+
+1. Host mapped write to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- WRITE (GBPS)     | 93721.037
+ ---------------------------------------|---------------
+ memset() (GBPS)                        | 28.868
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 41494.810
+
+
+2. CL copy of copyBuffer to inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.583
+
+
+3. GPU kernel read of inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 0.221
+
+ Verification Passed!
+
+
+4. GPU kernel write to outputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 3.029
+
+
+5. CL copy of outputBuffer to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.614
+
+
+6. Host mapped read of copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- READ (GBPS)      | 226492.505
+ ---------------------------------------|---------------
+ CPU read (GBPS)                        | 12.561
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 35761.975
+
+ Verification Passed!
+
+
+Loop 5
+
+
+
+1. Host mapped write to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- WRITE (GBPS)     | 452985.011
+ ---------------------------------------|---------------
+ memset() (GBPS)                        | 28.263
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 31603.605
+
+
+2. CL copy of copyBuffer to inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.578
+
+
+3. GPU kernel read of inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 0.222
+
+ Verification Passed!
+
+
+4. GPU kernel write to outputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 3.011
+
+
+5. CL copy of outputBuffer to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.618
+
+
+6. Host mapped read of copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- READ (GBPS)      | 258848.578
+ ---------------------------------------|---------------
+ CPU read (GBPS)                        | 12.533
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 46860.518
+
+ Verification Passed!
+
+
+Loop 6
+
+
+
+1. Host mapped write to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- WRITE (GBPS)     | 247082.733
+ ---------------------------------------|---------------
+ memset() (GBPS)                        | 28.538
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 44193.660
+
+
+2. CL copy of copyBuffer to inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.575
+
+
+3. GPU kernel read of inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 0.224
+
+ Verification Passed!
+
+
+4. GPU kernel write to outputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 3.016
+
+
+5. CL copy of outputBuffer to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.610
+
+
+6. Host mapped read of copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- READ (GBPS)      | 95365.265
+ ---------------------------------------|---------------
+ CPU read (GBPS)                        | 12.707
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 46860.518
+
+ Verification Passed!
+
+
+Loop 7
+
+
+
+1. Host mapped write to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- WRITE (GBPS)     | 452985.011
+ ---------------------------------------|---------------
+ memset() (GBPS)                        | 28.081
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 44555.903
+
+
+2. CL copy of copyBuffer to inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.566
+
+
+3. GPU kernel read of inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 0.224
+
+ Verification Passed!
+
+
+4. GPU kernel write to outputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 3.019
+
+
+5. CL copy of outputBuffer to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.620
+
+
+6. Host mapped read of copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- READ (GBPS)      | 97068.217
+ ---------------------------------------|---------------
+ CPU read (GBPS)                        | 12.169
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 36238.801
+
+ Verification Passed!
+
+
+Loop 8
+
+
+
+1. Host mapped write to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- WRITE (GBPS)     | 79938.531
+ ---------------------------------------|---------------
+ memset() (GBPS)                        | 28.536
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 44193.660
+
+
+2. CL copy of copyBuffer to inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.570
+
+
+3. GPU kernel read of inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 0.221
+
+ Verification Passed!
+
+
+4. GPU kernel write to outputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 3.013
+
+
+5. CL copy of outputBuffer to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.618
+
+
+6. Host mapped read of copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- READ (GBPS)      | 201326.672
+ ---------------------------------------|---------------
+ CPU read (GBPS)                        | 12.559
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 48971.353
+
+ Verification Passed!
+
+
+Loop 9
+
+
+
+1. Host mapped write to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- WRITE (GBPS)     | 115655.747
+ ---------------------------------------|---------------
+ memset() (GBPS)                        | 26.164
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 31788.422
+
+
+2. CL copy of copyBuffer to inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.587
+
+
+3. GPU kernel read of inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 0.222
+
+ Verification Passed!
+
+
+4. GPU kernel write to outputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 3.026
+
+
+5. CL copy of outputBuffer to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.617
+
+
+6. Host mapped read of copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- READ (GBPS)      | 209070.005
+ ---------------------------------------|---------------
+ CPU read (GBPS)                        | 12.630
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 37231.645
+
+ Verification Passed!
+
+
+Loop 10
+
+
+
+1. Host mapped write to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- WRITE (GBPS)     | 452985.011
+ ---------------------------------------|---------------
+ memset() (GBPS)                        | 27.520
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 44924.133
+
+
+2. CL copy of copyBuffer to inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.581
+
+
+3. GPU kernel read of inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 0.221
+
+ Verification Passed!
+
+
+4. GPU kernel write to outputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 3.017
+
+
+5. CL copy of outputBuffer to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.614
+
+
+6. Host mapped read of copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- READ (GBPS)      | 100663.336
+ ---------------------------------------|---------------
+ CPU read (GBPS)                        | 11.016
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 42138.141
+
+ Verification Passed!
+
+
+Loop 11
+
+
+
+1. Host mapped write to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- WRITE (GBPS)     | 418140.010
+ ---------------------------------------|---------------
+ memset() (GBPS)                        | 28.222
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 43486.561
+
+
+2. CL copy of copyBuffer to inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.582
+
+
+3. GPU kernel read of inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 0.221
+
+ Verification Passed!
+
+
+4. GPU kernel write to outputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 3.017
+
+
+5. CL copy of outputBuffer to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.610
+
+
+6. Host mapped read of copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- READ (GBPS)      | 217432.805
+ ---------------------------------------|---------------
+ CPU read (GBPS)                        | 11.196
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 48104.603
+
+ Verification Passed!
+
+
+Loop 12
+
+
+
+1. Host mapped write to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- WRITE (GBPS)     | 494165.466
+ ---------------------------------------|---------------
+ memset() (GBPS)                        | 29.004
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 35528.236
+
+
+2. CL copy of copyBuffer to inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.587
+
+
+3. GPU kernel read of inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 0.222
+
+ Verification Passed!
+
+
+4. GPU kernel write to outputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 3.020
+
+
+5. CL copy of outputBuffer to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.619
+
+
+6. Host mapped read of copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- READ (GBPS)      | 95365.265
+ ---------------------------------------|---------------
+ CPU read (GBPS)                        | 11.377
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 36728.514
+
+ Verification Passed!
+
+
+Loop 13
+
+
+
+1. Host mapped write to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- WRITE (GBPS)     | 452985.011
+ ---------------------------------------|---------------
+ memset() (GBPS)                        | 27.850
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 34403.925
+
+
+2. CL copy of copyBuffer to inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.582
+
+
+3. GPU kernel read of inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 0.221
+
+ Verification Passed!
+
+
+4. GPU kernel write to outputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 3.007
+
+
+5. CL copy of outputBuffer to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.614
+
+
+6. Host mapped read of copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- READ (GBPS)      | 98833.093
+ ---------------------------------------|---------------
+ CPU read (GBPS)                        | 11.666
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 44193.660
+
+ Verification Passed!
+
+
+Loop 14
+
+
+
+1. Host mapped write to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- WRITE (GBPS)     | 258848.578
+ ---------------------------------------|---------------
+ memset() (GBPS)                        | 28.745
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 34623.058
+
+
+2. CL copy of copyBuffer to inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.585
+
+
+3. GPU kernel read of inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 0.221
+
+ Verification Passed!
+
+
+4. GPU kernel write to outputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 3.022
+
+
+5. CL copy of outputBuffer to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.507
+
+
+6. Host mapped read of copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- READ (GBPS)      | 187442.073
+ ---------------------------------------|---------------
+ CPU read (GBPS)                        | 11.403
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 30032.155
+
+ Verification Passed!
+
+
+Loop 15
+
+
+
+1. Host mapped write to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- WRITE (GBPS)     | 418140.010
+ ---------------------------------------|---------------
+ memset() (GBPS)                        | 24.296
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 35069.807
+
+
+2. CL copy of copyBuffer to inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.462
+
+
+3. GPU kernel read of inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 0.221
+
+ Verification Passed!
+
+
+4. GPU kernel write to outputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 3.016
+
+
+5. CL copy of outputBuffer to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.618
+
+
+6. Host mapped read of copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- READ (GBPS)      | 81131.644
+ ---------------------------------------|---------------
+ CPU read (GBPS)                        | 12.040
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 47268.001
+
+ Verification Passed!
+
+
+Loop 16
+
+
+
+1. Host mapped write to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- WRITE (GBPS)     | 452985.011
+ ---------------------------------------|---------------
+ memset() (GBPS)                        | 27.189
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 42801.733
+
+
+2. CL copy of copyBuffer to inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.593
+
+
+3. GPU kernel read of inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 0.221
+
+ Verification Passed!
+
+
+4. GPU kernel write to outputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 3.023
+
+
+5. CL copy of outputBuffer to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.621
+
+
+6. Host mapped read of copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- READ (GBPS)      | 95365.265
+ ---------------------------------------|---------------
+ CPU read (GBPS)                        | 11.758
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 46860.518
+
+ Verification Passed!
+
+
+Loop 17
+
+
+
+1. Host mapped write to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- WRITE (GBPS)     | 494165.466
+ ---------------------------------------|---------------
+ memset() (GBPS)                        | 27.888
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 44193.660
+
+
+2. CL copy of copyBuffer to inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.578
+
+
+3. GPU kernel read of inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 0.221
+
+ Verification Passed!
+
+
+4. GPU kernel write to outputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 3.021
+
+
+5. CL copy of outputBuffer to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.614
+
+
+6. Host mapped read of copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- READ (GBPS)      | 247082.733
+ ---------------------------------------|---------------
+ CPU read (GBPS)                        | 12.095
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 36238.801
+
+ Verification Passed!
+
+
+Loop 18
+
+
+
+1. Host mapped write to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- WRITE (GBPS)     | 452985.011
+ ---------------------------------------|---------------
+ memset() (GBPS)                        | 28.996
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 44555.903
+
+
+2. CL copy of copyBuffer to inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.580
+
+
+3. GPU kernel read of inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 0.221
+
+ Verification Passed!
+
+
+4. GPU kernel write to outputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 3.023
+
+
+5. CL copy of outputBuffer to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.513
+
+
+6. Host mapped read of copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- READ (GBPS)      | 135895.503
+ ---------------------------------------|---------------
+ CPU read (GBPS)                        | 11.260
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 36728.514
+
+ Verification Passed!
+
+
+Loop 19
+
+
+
+1. Host mapped write to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- WRITE (GBPS)     | 494165.466
+ ---------------------------------------|---------------
+ memset() (GBPS)                        | 27.065
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 33973.876
+
+
+2. CL copy of copyBuffer to inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.459
+
+
+3. GPU kernel read of inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 0.222
+
+ Verification Passed!
+
+
+4. GPU kernel write to outputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 3.030
+
+
+5. CL copy of outputBuffer to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.600
+
+
+6. Host mapped read of copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- READ (GBPS)      | 150995.004
+ ---------------------------------------|---------------
+ CPU read (GBPS)                        | 11.808
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 48971.353
+
+ Verification Passed!
+
+
+AVERAGES (over loops 2 - 19, use -l for complete log)
+--------
+
+
+1. Host mapped write to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- WRITE (GBPS)     | 259535.179
+ ---------------------------------------|---------------
+ memset() (GBPS)                        | 27.492
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 36700.961
+
+
+2. CL copy of copyBuffer to inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.553
+
+
+3. GPU kernel read of inputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 0.222
+
+ Verification Passed!
+
+
+4. GPU kernel write to outputBuffer
+ ---------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)        | 3.019
+
+
+5. CL copy of outputBuffer to copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueCopyBuffer (GBPS)             | 2.596
+
+
+6. Host mapped read of copyBuffer
+ ---------------------------------------|---------------
+ clEnqueueMapBuffer -- READ (GBPS)      | 108716.403
+ ---------------------------------------|---------------
+ CPU read (GBPS)                        | 11.906
+ ---------------------------------------|---------------
+ clEnqueueUnmapMemObject() (GBPS)       | 41689.289
+
+ Verification Passed!
+
+
+Passed!

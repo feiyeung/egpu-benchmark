@@ -1,0 +1,46 @@
+Radeon Software Version - 17.4.2
+Radeon Software Edition - Crimson ReLive
+Graphics Chipset - Radeon (TM) RX 470 Graphics
+Memory Size - 4096 MB
+Memory Type - GDDR5
+Core Clock - 1250 MHz
+Windows Version - Windows 10 (64 bit)
+System Memory - 16 GB
+CPU Type - Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz
+
+
+Radeon Settings Version - 2017.0210.908.16431
+Driver Packaging Version - 17.10.1711-170410a-313068E-CrimsonReLive
+Provider - Advanced Micro Devices, Inc.
+2D Driver Version - 8.1.1.1599
+Direct3D® Version - 9.14.10.01261
+OpenGL® Version - 6.14.10.13474
+OpenCL™ Version - 22.19.157.3
+AMD Mantle Version - 9.1.10.0189
+AMD Mantle API Version - 102400
+AMD Audio Driver Version - 10.0.1.1
+Vulkan™ Driver Version - 1.5.0
+Vulkan™ API Version - 1.0.39
+
+
+Graphics Card Manufacturer - Powered by AMD
+Graphics Chipset - Radeon (TM) RX 470 Graphics
+Device ID - 67DF
+Vendor ID - 1002
+SubSystem ID - 04B0
+SubSystem Vendor ID - 1043
+Revision ID - CF
+Bus Type - PCI Express 3.0
+Current Bus Settings - PCI Express 3.0 x4
+BIOS Version - 015.050.000.000
+BIOS Part Number - 115-D000PI20-100
+BIOS Date - 2016/11/06 23:48
+Memory Size - 4096 MB
+Memory Type - GDDR5
+Memory Clock - 1650 MHz
+Core Clock - 1250 MHz
+Total Memory Bandwidth - 211 GByte/s
+Memory Bit Rate - 6.60 Gbps
+2D Driver File Path - /REGISTRY/MACHINE/SYSTEM/ControlSet001/Control/Class/{4d36e968-e325-11ce-bfc1-08002be10318}/0002
+
+

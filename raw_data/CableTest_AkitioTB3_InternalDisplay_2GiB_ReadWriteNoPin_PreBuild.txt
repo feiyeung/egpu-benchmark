@@ -1,0 +1,582 @@
+Platform 0 : Intel(R) Corporation
+Platform 1 : NVIDIA Corporation
+Platform 2 : Advanced Micro Devices, Inc.
+Platform found : Advanced Micro Devices, Inc.
+
+Selected Platform Vendor : Advanced Micro Devices, Inc.
+Device 0 : Ellesmere Device ID is 0000029C9B83FB30
+Build Options are : -cl-std=CL2.0 
+Build:               _WINxx release
+GPU work items:      32768
+Buffer size:         2147483648
+CPU workers:         1
+Timing loops:        20
+Repeats:             1
+Kernel loops:        20
+inputBuffer:         CL_MEM_READ_ONLY 
+outputBuffer:        CL_MEM_WRITE_ONLY 
+inputSVMBuffer:      CL_MEM_READ_ONLY 
+outputSVMBuffer:     CL_MEM_WRITE_ONLY 
+
+Host baseline (naive):
+
+Timer resolution     397.01  ns
+Page fault           750.00  ns
+Barrier speed        58.90   ns
+
+CPU read             11.57 GB/s
+memcpy()             8.42 GB/s
+memset(,1,)          26.41 GB/s
+memset(,0,)          26.21 GB/s
+
+
+LOOP ITERATIONS
+---------------
+
+Loop 0
+
+
+
+1. Host CL write to inputBuffer
+ ------------------------------------|---------------
+ clEnqueueWriteBuffer (GBPS)         | 2.005
+
+
+2. GPU kernel read of inputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 0.222
+
+ Verification Passed!
+
+
+3. GPU kernel write to outputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 3.165
+
+
+4. Host CL read of outputBuffer
+ ------------------------------------|---------------
+ clEnqueueReadBuffer (GBPS)          | 2.310
+
+
+Loop 1
+
+
+
+1. Host CL write to inputBuffer
+ ------------------------------------|---------------
+ clEnqueueWriteBuffer (GBPS)         | 2.272
+
+
+2. GPU kernel read of inputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 0.222
+
+ Verification Passed!
+
+
+3. GPU kernel write to outputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 3.040
+
+
+4. Host CL read of outputBuffer
+ ------------------------------------|---------------
+ clEnqueueReadBuffer (GBPS)          | 2.304
+
+
+Loop 2
+
+
+
+1. Host CL write to inputBuffer
+ ------------------------------------|---------------
+ clEnqueueWriteBuffer (GBPS)         | 2.250
+
+
+2. GPU kernel read of inputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 0.222
+
+ Verification Passed!
+
+
+3. GPU kernel write to outputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 3.011
+
+
+4. Host CL read of outputBuffer
+ ------------------------------------|---------------
+ clEnqueueReadBuffer (GBPS)          | 2.303
+
+
+Loop 3
+
+
+
+1. Host CL write to inputBuffer
+ ------------------------------------|---------------
+ clEnqueueWriteBuffer (GBPS)         | 2.277
+
+
+2. GPU kernel read of inputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 0.221
+
+ Verification Passed!
+
+
+3. GPU kernel write to outputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 3.020
+
+
+4. Host CL read of outputBuffer
+ ------------------------------------|---------------
+ clEnqueueReadBuffer (GBPS)          | 2.281
+
+
+Loop 4
+
+
+
+1. Host CL write to inputBuffer
+ ------------------------------------|---------------
+ clEnqueueWriteBuffer (GBPS)         | 2.304
+
+
+2. GPU kernel read of inputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 0.221
+
+ Verification Passed!
+
+
+3. GPU kernel write to outputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 3.030
+
+
+4. Host CL read of outputBuffer
+ ------------------------------------|---------------
+ clEnqueueReadBuffer (GBPS)          | 2.250
+
+
+Loop 5
+
+
+
+1. Host CL write to inputBuffer
+ ------------------------------------|---------------
+ clEnqueueWriteBuffer (GBPS)         | 2.284
+
+
+2. GPU kernel read of inputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 0.221
+
+ Verification Passed!
+
+
+3. GPU kernel write to outputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 3.021
+
+
+4. Host CL read of outputBuffer
+ ------------------------------------|---------------
+ clEnqueueReadBuffer (GBPS)          | 2.271
+
+
+Loop 6
+
+
+
+1. Host CL write to inputBuffer
+ ------------------------------------|---------------
+ clEnqueueWriteBuffer (GBPS)         | 2.299
+
+
+2. GPU kernel read of inputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 0.222
+
+ Verification Passed!
+
+
+3. GPU kernel write to outputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 3.053
+
+
+4. Host CL read of outputBuffer
+ ------------------------------------|---------------
+ clEnqueueReadBuffer (GBPS)          | 2.301
+
+
+Loop 7
+
+
+
+1. Host CL write to inputBuffer
+ ------------------------------------|---------------
+ clEnqueueWriteBuffer (GBPS)         | 2.301
+
+
+2. GPU kernel read of inputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 0.221
+
+ Verification Passed!
+
+
+3. GPU kernel write to outputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 3.067
+
+
+4. Host CL read of outputBuffer
+ ------------------------------------|---------------
+ clEnqueueReadBuffer (GBPS)          | 2.296
+
+
+Loop 8
+
+
+
+1. Host CL write to inputBuffer
+ ------------------------------------|---------------
+ clEnqueueWriteBuffer (GBPS)         | 2.254
+
+
+2. GPU kernel read of inputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 0.222
+
+ Verification Passed!
+
+
+3. GPU kernel write to outputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 3.068
+
+
+4. Host CL read of outputBuffer
+ ------------------------------------|---------------
+ clEnqueueReadBuffer (GBPS)          | 2.288
+
+
+Loop 9
+
+
+
+1. Host CL write to inputBuffer
+ ------------------------------------|---------------
+ clEnqueueWriteBuffer (GBPS)         | 2.278
+
+
+2. GPU kernel read of inputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 0.221
+
+ Verification Passed!
+
+
+3. GPU kernel write to outputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 3.065
+
+
+4. Host CL read of outputBuffer
+ ------------------------------------|---------------
+ clEnqueueReadBuffer (GBPS)          | 2.299
+
+
+Loop 10
+
+
+
+1. Host CL write to inputBuffer
+ ------------------------------------|---------------
+ clEnqueueWriteBuffer (GBPS)         | 2.282
+
+
+2. GPU kernel read of inputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 0.221
+
+ Verification Passed!
+
+
+3. GPU kernel write to outputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 3.050
+
+
+4. Host CL read of outputBuffer
+ ------------------------------------|---------------
+ clEnqueueReadBuffer (GBPS)          | 2.285
+
+
+Loop 11
+
+
+
+1. Host CL write to inputBuffer
+ ------------------------------------|---------------
+ clEnqueueWriteBuffer (GBPS)         | 2.276
+
+
+2. GPU kernel read of inputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 0.221
+
+ Verification Passed!
+
+
+3. GPU kernel write to outputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 3.057
+
+
+4. Host CL read of outputBuffer
+ ------------------------------------|---------------
+ clEnqueueReadBuffer (GBPS)          | 2.303
+
+
+Loop 12
+
+
+
+1. Host CL write to inputBuffer
+ ------------------------------------|---------------
+ clEnqueueWriteBuffer (GBPS)         | 2.300
+
+
+2. GPU kernel read of inputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 0.221
+
+ Verification Passed!
+
+
+3. GPU kernel write to outputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 3.056
+
+
+4. Host CL read of outputBuffer
+ ------------------------------------|---------------
+ clEnqueueReadBuffer (GBPS)          | 2.305
+
+
+Loop 13
+
+
+
+1. Host CL write to inputBuffer
+ ------------------------------------|---------------
+ clEnqueueWriteBuffer (GBPS)         | 2.309
+
+
+2. GPU kernel read of inputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 0.263
+
+ Verification Passed!
+
+
+3. GPU kernel write to outputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 3.021
+
+
+4. Host CL read of outputBuffer
+ ------------------------------------|---------------
+ clEnqueueReadBuffer (GBPS)          | 2.310
+
+
+Loop 14
+
+
+
+1. Host CL write to inputBuffer
+ ------------------------------------|---------------
+ clEnqueueWriteBuffer (GBPS)         | 2.274
+
+
+2. GPU kernel read of inputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 0.221
+
+ Verification Passed!
+
+
+3. GPU kernel write to outputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 3.018
+
+
+4. Host CL read of outputBuffer
+ ------------------------------------|---------------
+ clEnqueueReadBuffer (GBPS)          | 2.306
+
+
+Loop 15
+
+
+
+1. Host CL write to inputBuffer
+ ------------------------------------|---------------
+ clEnqueueWriteBuffer (GBPS)         | 2.265
+
+
+2. GPU kernel read of inputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 0.221
+
+ Verification Passed!
+
+
+3. GPU kernel write to outputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 3.028
+
+
+4. Host CL read of outputBuffer
+ ------------------------------------|---------------
+ clEnqueueReadBuffer (GBPS)          | 2.309
+
+
+Loop 16
+
+
+
+1. Host CL write to inputBuffer
+ ------------------------------------|---------------
+ clEnqueueWriteBuffer (GBPS)         | 2.290
+
+
+2. GPU kernel read of inputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 0.221
+
+ Verification Passed!
+
+
+3. GPU kernel write to outputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 3.017
+
+
+4. Host CL read of outputBuffer
+ ------------------------------------|---------------
+ clEnqueueReadBuffer (GBPS)          | 2.279
+
+
+Loop 17
+
+
+
+1. Host CL write to inputBuffer
+ ------------------------------------|---------------
+ clEnqueueWriteBuffer (GBPS)         | 2.302
+
+
+2. GPU kernel read of inputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 0.221
+
+ Verification Passed!
+
+
+3. GPU kernel write to outputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 3.018
+
+
+4. Host CL read of outputBuffer
+ ------------------------------------|---------------
+ clEnqueueReadBuffer (GBPS)          | 2.286
+
+
+Loop 18
+
+
+
+1. Host CL write to inputBuffer
+ ------------------------------------|---------------
+ clEnqueueWriteBuffer (GBPS)         | 2.299
+
+
+2. GPU kernel read of inputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 0.220
+
+ Verification Passed!
+
+
+3. GPU kernel write to outputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 3.061
+
+
+4. Host CL read of outputBuffer
+ ------------------------------------|---------------
+ clEnqueueReadBuffer (GBPS)          | 2.308
+
+
+Loop 19
+
+
+
+1. Host CL write to inputBuffer
+ ------------------------------------|---------------
+ clEnqueueWriteBuffer (GBPS)         | 2.307
+
+
+2. GPU kernel read of inputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 0.222
+
+ Verification Passed!
+
+
+3. GPU kernel write to outputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 3.065
+
+
+4. Host CL read of outputBuffer
+ ------------------------------------|---------------
+ clEnqueueReadBuffer (GBPS)          | 2.309
+
+
+AVERAGES (over loops 2 - 19, use -l for complete log)
+--------
+
+
+1. Host CL write to inputBuffer
+ ------------------------------------|---------------
+ clEnqueueWriteBuffer (GBPS)         | 2.286
+
+
+2. GPU kernel read of inputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 0.223
+
+ Verification Passed!
+
+
+3. GPU kernel write to outputBuffer
+ ------------------------------------|---------------
+ clEnqueueNDRangeKernel() (secs)     | 3.040
+
+
+4. Host CL read of outputBuffer
+ ------------------------------------|---------------
+ clEnqueueReadBuffer (GBPS)          | 2.294
+
+
+Passed!

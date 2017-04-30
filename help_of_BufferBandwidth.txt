@@ -1,0 +1,71 @@
+Usage
+-h,   --help                                            Display this information
+      --device        [cpu|gpu]                         Execute the openCL kernel on a device
+-q,   --quiet                                           Quiet mode. Suppress all text output.
+-e,   --verify                                          Verify results against reference implementation.
+-t,   --timing                                          Print timing.
+      --dump          [filename]                        Dump binary image for all devices
+      --load          [filename]                        Load binary image and execute on device
+      --flags         [filename]                        Specify filename containing the compiler flags to build kernel
+-p,   --platformId    [value]                           Select platformId to be used[0 to N-1 where N is number platforms available].
+-v,   --version                                         AMD APP SDK version string.
+-d,   --deviceId      [value]                           Select deviceId to be used[0 to N-1 where N is number devices available].
+-nwk, --numcpuwrk                                       Number of CPU workers (max: 32 (Linux: 1))
+-nl,  --numLoops      <n>                               Number of iterations to repeat overall bandwidth measurement
+-lp,  --numIterBfr    <n>                               When -noblock is active, set the number of iterations to run read/write buffer calls
+-nb,  --numBytes      <n>                               Buffer size in bytes (min: 2048*CPU Workers)
+-nr,  --numRepeats    <n>                               Repeat each timing <n> times (can't be 0)
+-nk,  --numKernelLoops<n>                               Number of loops in kernel
+-nw,  --numWavefronts <n>                               # of wave fronts per SIMD (can't be 0) (default: 7)
+-ty,  --testType      <n>                               Type of test:
+							0 clEnqueue[Map,Unmap]
+							1 clEnqueue[Read,Write]
+							2 clEnqueueCopy
+							3 clEnqueue[Read,Write], prepinned
+
+-dma, --pcie                                            Measure PCIe/interconnect bandwidth
+-nob, --noblock                                         When -pcie is active, measure PCIe/interconnect
+							bandwidth using multiple back-to-back asynchronous
+							buffer copies
+
+-s,   --nSkip         <n>                               Skip first <n> timings for average (default: 1)
+-l,   --printLog                                        Print complete timing log
+-if,  --inputflag     <n>                               Memory flags. OK to use multiple
+							0 CL_MEM_READ_ONLY
+							1 CL_MEM_WRITE_ONLY
+							2 CL_MEM_READ_WRITE
+							3 CL_MEM_USE_HOST_PTR
+							4 CL_MEM_COPY_HOST_PTR
+							5 CL_MEM_ALLOC_HOST_PTR
+							6 CL_MEM_USE_PERSISTENT_MEM_AMD
+							7 CL_MEM_HOST_WRITE_ONLY
+							8 CL_MEM_HOST_READ_ONLY
+							9 CL_MEM_HOST_NO_ACCESS
+
+-of,  --outputflag    <n>                               Memory flags. OK to use multiple
+							0 CL_MEM_READ_ONLY
+							1 CL_MEM_WRITE_ONLY
+							2 CL_MEM_READ_WRITE
+							3 CL_MEM_USE_HOST_PTR
+							4 CL_MEM_COPY_HOST_PTR
+							5 CL_MEM_ALLOC_HOST_PTR
+							6 CL_MEM_USE_PERSISTENT_MEM_AMD
+							7 CL_MEM_HOST_WRITE_ONLY
+							8 CL_MEM_HOST_READ_ONLY
+							9 CL_MEM_HOST_NO_ACCESS
+
+-cf,  --copyflag      <n>                               Memory flags. OK to use multiple
+							0 CL_MEM_READ_ONLY
+							1 CL_MEM_WRITE_ONLY
+							2 CL_MEM_READ_WRITE
+							3 CL_MEM_USE_HOST_PTR
+							4 CL_MEM_COPY_HOST_PTR
+							5 CL_MEM_ALLOC_HOST_PTR
+							6 CL_MEM_USE_PERSISTENT_MEM_AMD
+							7 CL_MEM_HOST_WRITE_ONLY
+							8 CL_MEM_HOST_READ_ONLY
+							9 CL_MEM_HOST_NO_ACCESS
+
+-hbw, --enablehostbw                                    enable/disable host mem B/W baseline. 0 or 1
+-m,   --mapRW                                           always map as MAP_READ | MAP_WRITE
+-t,   --timings                                         Print all timings including setup-time
